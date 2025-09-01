@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="am">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ወደ ካናዳ ጉዞ – የተመዝጋቢ ፎርም</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to bottom right, #3ca0ff, #004080);
+      color: #fff;
+      font-family: "Noto Sans Ethiopic", "Segoe UI", sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .form-wrapper {
+      background: rgba(0, 32, 64, 0.88);
+      border-radius: 20px;
+      padding: 30px;
+      max-width: 950px;
+      width: 100%;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+      margin: 20px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    header img {
+      width: 160px;
+      margin-bottom: 15px;
+    }
+    header h1 {
+      font-weight: bold;
+      font-size: 1.8rem;
+      color: #ffffff;
+    }
+    header p {
+      color: #cfe2ff;
+    }
+    label {
+      font-weight: 600;
+      color: #dbe8ff;
+    }
+    .form-control, .form-select {
+      background: #002850;
+      border: 1px solid #335f99;
+      color: #fff;
+      border-radius: 10px;
+    }
+    .form-control:focus, .form-select:focus {
+      background: #002850;
+      border-color: #66b3ff;
+      box-shadow: none;
+      color: white;
+    }
+    .form-check-label {
+      font-weight: 500;
+    }
+    .btn-primary {
+      background: #007bff;
+      border: none;
+      border-radius: 10px;
+      padding: 12px 25px;
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+    .btn-primary:hover {
+      background: #0056b3;
+    }
+    .btn-outline-light {
+      border-radius: 10px;
+      font-weight: bold;
+    }
+    .upload-box {
+      border: 1px dashed #66b3ff;
+      padding: 15px;
+      border-radius: 12px;
+      background: rgba(0, 40, 80, 0.6);
+      text-align: center;
+    }
+    @media (max-width: 576px) {
+      header img {
+        width: 120px;
+      }
+      header h1 {
+        font-size: 1.4rem;
+      }
+    }
+    #btn{
+        background-color: white;
+    }
+    #clearSig{
+        background-color: black;
+        color: white;
+    }
+    
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="form-wrapper">
+    <header>
+      <img src="halaz.jpg" alt="የኢትዮጵያ እና የካናዳ ባንዲራዎች" />
+      <h1>ENBRIDGE ጉዞ ወኪል</h1>
+      <p>ወደ ካናዳ የጉዞ መመዝገቢያ ፎርም።</p>
+    </header>
+
+    <form id="myForm">
+      <!-- Personal Info -->
+      <h5 class="mb-3">👤 የግል መረጃ</h5>
+      <div class="row g-3 mb-3">
+        <div class="col-md-6">
+          <label class="form-label">ሙሉ ስም</label>
+          <input type="text" name="full_name" class="form-control" required>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">የትውልድ ቀን</label>
+          <input type="date" name="birth_date" class="form-control" required>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">የትውልድ ቦታ</label>
+          <input type="text" name="birth_place" class="form-control" required>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">ጾታ</label><br>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gender" value="male" required>
+            <label class="form-check-label">ወንድ</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gender" value="female">
+            <label class="form-check-label">ሴት</label>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">የጋብቻ ሁኔታ</label>
+          <select class="form-select" name="marital_status" required>
+            <option value="">ይምረጡ…</option>
+            <option>ያላገባ</option>
+            <option>ያገባ</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Contact Info -->
+      <h5 class="mb-3">📞 የእውቂያ መረጃ</h5>
+      <div class="row g-3 mb-3">
+        <div class="col-md-6">
+          <label class="form-label">ስልክ ቁጥር</label>
+          <input type="tel" name="phone" class="form-control" required>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">ኢሜይል</label>
+          <input type="email" name="email" class="form-control" required>
+        </div>
+        <div class="col-12">
+          <label class="form-label">አድራሻ</label>
+          <input type="text" name="address" class="form-control" required>
+        </div>
+      </div>
+
+      <!-- Passport Info -->
+      <h5 class="mb-3">🛂 የፓስፖርት መረጃ</h5>
+      <div class="row g-3 mb-3">
+        <div class="col-md-6">
+          <label class="form-label">የፓስፖርት ቁጥር</label>
+          <input type="text" name="passport_number" class="form-control" required>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">የፓስፖርት ጊዜ መጨረሻ</label>
+          <input type="date" name="passport_expiry" class="form-control" required>
+        </div>
+      </div>
+
+      <!-- Education & Profession -->
+      <h5 class="mb-3">🎓 ትምህርት እና ሙያ</h5>
+      <div class="row g-3 mb-3">
+        <div class="col-md-6">
+          <label class="form-label">የትምህርት ደረጃ</label>
+          <select class="form-select" name="education" required>
+            <option value="">ይምረጡ…</option>
+            <option>የዩኒቨርሲቲ ትምህርት</option>
+            <option>ማስተርስ</option>
+            <option>ፒኤችዲ</option>
+            <option>ሌላ</option>
+          </select>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">ሙያ</label>
+          <input type="text" name="profession" class="form-control" required>
+        </div>
+      </div>
+
+      <!-- Emergency Contact -->
+      <h5 class="mb-3">🚨 የአደጋ ጊዜ ተጠሪ</h5>
+      <div class="row g-3 mb-3">
+        <div class="col-md-6">
+          <label class="form-label">ስም</label>
+          <input type="text" name="emergency_name" class="form-control" required>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">ስልክ</label>
+          <input type="tel" name="emergency_phone" class="form-control" required>
+        </div>
+      </div>
+
+      <!-- Photo -->
+      <div class="mb-3">
+        <label class="form-label">📸 የአመልካች ፎቶ</label>
+        <div class="upload-box">
+          <input type="file" name="user_photo" class="form-control" accept="image/*" required>
+          <small class="text-light">እባክዎን የፎቶ ፋይል ይጫኑ</small>
+        </div>
+      </div>
+
+      <!-- Signature -->
+      <div class="mb-3" id="btn">
+        <label class="form-label">✍️ የአመልካች ፊርማ</label>
+        <canvas id="signaturePad"></canvas>
+        <button type="button" class="btn btn-outline-light mt-2" id="clearSig">ፊርማ አጽዳ</button>
+      </div>
+
+      <div class="d-flex justify-content-between mt-4">
+        <button type="button" class="btn btn-primary w-50 me-2" onclick="sendEmail()">አስረክብ</button>
+        <button type="reset" class="btn btn-outline-light w-50">አጽዳ</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+(function(){ emailjs.init("sj3sCNJ7oKVk6ffPG"); })(); // Replace with your EmailJS public key
+
+// Signature pad
+const canvas=document.getElementById("signaturePad");
+const ctx=canvas.getContext("2d");let drawing=false;
+canvas.addEventListener("mousedown",()=>drawing=true);
+canvas.addEventListener("mouseup",()=>drawing=false);
+canvas.addEventListener("mousemove",draw);
+function draw(e){if(!drawing)return;ctx.lineWidth=2;ctx.lineCap="round";ctx.strokeStyle="#000";ctx.lineTo(e.offsetX,e.offsetY);ctx.stroke();ctx.beginPath();ctx.moveTo(e.offsetX,e.offsetY);}
+document.getElementById("clearSig").addEventListener("click",()=>ctx.clearRect(0,0,canvas.width,canvas.height));
+
+// Resize image function
+function resizeImage(file,maxWidth,maxHeight,callback){
+  const reader=new FileReader();
+  reader.onload=function(e){
+    const img=new Image();
+    img.onload=function(){
+      const canvasR=document.createElement('canvas');
+      const ctxR=canvasR.getContext('2d');
+      const ratio=Math.min(maxWidth/img.width,maxHeight/img.height);
+      canvasR.width=img.width*ratio;
+      canvasR.height=img.height*ratio;
+      ctxR.drawImage(img,0,0,canvasR.width,canvasR.height);
+      callback(canvasR.toDataURL('image/jpeg',0.7));
+    }
+    img.src=e.target.result;
+  }
+  reader.readAsDataURL(file);
+}
+
+function sendEmail(){
+  const form=document.getElementById('myForm');
+  const photoFile=form.querySelector('input[name="user_photo"]').files[0];
+  if(!photoFile){ alert('እባክዎ ፎቶ ይጫኑ!'); return; }
+
+  resizeImage(photoFile,600,600,function(resizedPhoto){
+    const signatureBase64=canvas.toDataURL();
+    const formData={
+      full_name: form.full_name.value,
+      birth_date: form.birth_date.value,
+      birth_place: form.birth_place.value,
+      gender: form.gender.value,
+      marital_status: form.marital_status.value,
+      phone: form.phone.value,
+      email: form.email.value,
+      address: form.address.value,
+      passport_number: form.passport_number.value,
+      passport_expiry: form.passport_expiry.value,
+      education: form.education.value,
+      profession: form.profession.value,
+      emergency_name: form.emergency_name.value,
+      emergency_phone: form.emergency_phone.value,
+      user_photo: resizedPhoto,
+      user_signature: signatureBase64
+    };
+    emailjs.send("service_p573kho","template_3us778m",formData)
+    .then(response=>{ alert('ፎርም በሚገባ ተላከ!'); form.reset(); ctx.clearRect(0,0,canvas.width,canvas.height); })
+    .catch(err=>{ alert('ፎርም መላክ አልተቻለም።'); console.log(err); });
+  });
+}
+</script>
+</body>
+</html>
